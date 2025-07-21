@@ -1,4 +1,5 @@
 import Sidebar from '@/components/sidebar'
+import { Provider } from '@/util/providers'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${geistSans} antialiased`}>
-        <Sidebar />
-        {children}
+        <Provider>
+          <Sidebar />
+          {children}
+        </Provider>
       </body>
     </html>
   )
