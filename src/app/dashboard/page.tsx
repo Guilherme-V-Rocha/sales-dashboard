@@ -11,7 +11,7 @@ export default function Dashboard() {
     <>
       <div className="md:hidden grid mt-10 mb-10 mr-6 ml-6">
         <SubHeaderMobile />
-        <div className="flex gap-10 flex-col overflow-auto">
+        <div className="flex mt-10 gap-10 flex-col overflow-auto">
           <div className="md:hidden grid grid-cols-1 gap-8">
             <RevenueChart />
             <TransactionHistory />
@@ -20,9 +20,9 @@ export default function Dashboard() {
           <BueyerHistory />
         </div>
       </div>
-      <div className="hidden md:block flex-col my-10 ml-20 mb-10 gap-10 w-max">
+      <div className="hidden md:block flex-col my-10 ml-20 mr-20 mb-10 gap-10 w-max">
         <SubHeader />
-        <div className="flex gap-10 flex-col overflow-auto">
+        <div className="flex h-max gap-10 flex-col overflow-auto">
           <div className="flex gap-8">
             <RevenueChart />
             <TransactionHistory />

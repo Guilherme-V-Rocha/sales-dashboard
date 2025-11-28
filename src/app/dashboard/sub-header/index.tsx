@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export function SubHeader() {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between mb-10">
       <div>
         <h1 className="font-medium text-3xl text-dark05">Olá, Guilherme</h1>
         <p className="font-medium text-[1.125rem] text-[#6A6969]">
