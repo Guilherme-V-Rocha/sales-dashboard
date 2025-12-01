@@ -7,10 +7,10 @@ export function BueyerHistory() {
       <p className="font-medium text-xl text-dark05">
         Histórico de compradores
       </p>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Table />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
         <Card />
       </div>
     </div>

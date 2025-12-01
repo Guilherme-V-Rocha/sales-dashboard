@@ -16,7 +16,7 @@ export function SidebarMobile() {
   const { setIsOpen } = useSubHeader()
 
   return (
-    <div className="w-xs bg-white p-10 rounded-r-[1.5rem] h-full flex flex-col md:hidden absolute">
+    <div className="w-xs bg-white p-10 rounded-r-[1.5rem] h-full flex flex-col lg:hidden absolute">
       <button
         className="justify-items-end-safe cursor-pointer"
         onClick={() => setIsOpen(false)}

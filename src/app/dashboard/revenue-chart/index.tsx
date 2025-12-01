@@ -23,21 +23,21 @@ export function RevenueChart() {
   }))
 
   return (
-    <div className="rounded-[0.75rem] p-10 w-full overflow-hidden bg-white ">
+    <div className="rounded-[0.75rem] p-10 pb-[4.75rem] w-full overflow-hidden bg-white ">
       <p className="text-xl">Gráfico de receitas</p>
 
       <div className="flex gap-7 mt-6 h-full">
         <div className="text-gray10 flex flex-col justify-between h-[79.5%]">
           {params.map((value) => (
-            <p key={value.toString()}>{value}</p>
+            <p key={value}>{value}</p>
           ))}
         </div>
 
-        <div className="flex text-gray10 gap-4 w-full overflow-x-auto h-[89.5%]">
+        <div className="flex text-gray10 gap-6 sm:gap-3 overflow-x-auto h-[89.5%] w-full pl-1">
           {dataProcess.map(({ month, percentual }) => (
             <div
               key={month}
-              className="flex flex-col h-full justify-end-safe items-center-safe w-[8.4%] gap-3"
+              className="flex flex-col h-full justify-end items-center  w-[20.4%] gap-3"
             >
               <div
                 style={{ height: percentual }}

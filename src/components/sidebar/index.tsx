@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
     <>
       {isOpen && <SidebarMobile />}
-      <div className="w-xs bg-white p-10 rounded-r-[1.5rem] h-screen hidden md:block">
+      <div className="w-[18.15%] bg-white p-10 rounded-r-[1.5rem] h-screen hidden lg:block">
         <EFront alt="eFront" className="m-5 mb-[3.75rem]" />
         <ul className="flex gap-4 flex-col">
           <Link

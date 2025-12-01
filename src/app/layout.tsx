@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`${geistSans} antialiased`}>
+    <html lang="pt-br" className="h-full">
+      <body
+        className={`${geistSans} antialiased max-w-[100dvw] min-h-full relative flex text-(--foreground) bg-(--background) font-display`}
+      >
         <Provider>
           <Sidebar />
           {children}
