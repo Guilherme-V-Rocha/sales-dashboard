@@ -9,10 +9,10 @@ import { TransactionHistory } from './transaction-history'
 export default function Dashboard() {
   return (
     <>
-      <div className="md:hidden grid mt-10 mb-10 mr-6 ml-6">
+      <div className="lg:hidden grid mt-10 mb-10 mr-6 ml-6 w-full">
         <SubHeaderMobile />
-        <div className="flex mt-10 gap-10 flex-col overflow-auto">
-          <div className="md:hidden grid grid-cols-1 gap-8">
+        <div className="flex gap-10 flex-col overflow-auto">
+          <div className="lg:hidden grid grid-cols-1 gap-8">
             <RevenueChart />
             <TransactionHistory />
           </div>
@@ -20,9 +20,9 @@ export default function Dashboard() {
           <BueyerHistory />
         </div>
       </div>
-      <div className="hidden md:block flex-col my-10 ml-20 mr-20 mb-10 gap-10 w-max">
+      <div className="hidden lg:flex flex-col my-10 ml-20 gap-10 h-[91dvh] w-[68.4%]">
         <SubHeader />
-        <div className="flex h-max gap-10 flex-col overflow-auto">
+        <div className="flex gap-10 flex-col overflow-y-scroll">
           <div className="flex gap-8">
             <RevenueChart />
             <TransactionHistory />

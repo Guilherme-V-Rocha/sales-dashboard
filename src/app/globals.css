@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@tailwind utilities;
 
 @theme {
   --color-purple10: #9e6efe0f;
@@ -9,6 +10,7 @@
   --color-dark20: #414141;
   --color-dark30: #737373;
   --color-dark40: #ffffff;
+  --font-display: 'Poppins', sans-serif;
 }
 
 :root {
@@ -16,10 +18,6 @@
   --foreground: #272727;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  display: flex;
-  height: 100dvh;
-  font-family: Poppins, sans-serif;
+* {
+  box-sizing: border-box;
 }

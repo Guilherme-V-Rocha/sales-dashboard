@@ -11,10 +11,10 @@ export function SubHeaderMobile() {
   const { setIsOpen } = useSubHeader()
 
   return (
-    <div className="grid sm:grid-cols-2 grid-cols-1 md:hidden mb-10">
+    <div className="grid grid-cols-1 lg:hidden mb-10">
       <div className="flex justify-between mb-10">
         <button
-          className="cursor-pointer md:hidden"
+          className="cursor-pointer lg:hidden"
           onClick={() => setIsOpen(true)}
         >
           <AsideIcon />
@@ -35,11 +35,10 @@ export function SubHeaderMobile() {
               alt="profile"
               className="rounded-4xl"
             />
-            <p className="hidden md:block">Guilherme V.</p>
+            <p className="hidden lg:block">Guilherme V.</p>
           </div>
         </div>
       </div>
-
       <div>
         <h1 className="font-medium text-3xl text-dark05">Olá, Guilherme</h1>
         <p className="font-medium text-[1.125rem] text-[#6A6969]">

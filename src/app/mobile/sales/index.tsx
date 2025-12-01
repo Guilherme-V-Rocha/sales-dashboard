@@ -3,7 +3,7 @@ import PositiveIcon from '@/icons/positiveIcon.svg'
 
 export function SalesMobile() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
       <div className="flex flex-col rounded-[0.75rem] p-5 bg-white gap-3 h-fit">
         <p className="text-base">Total de vendas</p>
         <p className="text-2xl font-semibold">R$ 3.265,21</p>
