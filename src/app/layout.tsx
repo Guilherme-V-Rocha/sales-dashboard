@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="h-full">
       <body
-        className={`${geistSans} antialiased max-w-[100dvw] min-h-full relative flex text-(--foreground) bg-(--background) font-display`}
+        className={`${geistSans} antialiased max-w-[100dvw] h-full relative flex text-[var(--foreground)] bg-[var(--background)] font-display`}
       >
         <Provider>
           <Sidebar />

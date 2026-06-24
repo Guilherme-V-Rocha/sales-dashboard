@@ -1,36 +1,21 @@
-import { SalesMobile } from '../mobile/sales'
-import { SubHeaderMobile } from '../mobile/sub-header'
-import { BueyerHistory } from './buyer-history'
-import { RevenueChart } from './revenue-chart'
-import { Sales } from './sales'
-import { SubHeader } from './sub-header'
-import { TransactionHistory } from './transaction-history'
+import { BueyerHistory } from '@/components/dashboard/buyer-history'
+import { RevenueChart } from '@/components/dashboard/revenue-chart'
+import { Sales } from '@/components/dashboard/sales'
+import { Header } from '@/components/dashboard/sub-header'
+import { TransactionHistory } from '@/components/dashboard/transaction-history'
 
 export default function Dashboard() {
   return (
-    <>
-      <div className="lg:hidden grid mt-10 mb-10 mr-6 ml-6 w-full">
-        <SubHeaderMobile />
-        <div className="flex gap-10 flex-col overflow-auto">
-          <div className="lg:hidden grid grid-cols-1 gap-8">
-            <RevenueChart />
-            <TransactionHistory />
-          </div>
-          <SalesMobile />
-          <BueyerHistory />
+    <div className="grid mt-10 mb-10 mr-6 ml-6 w-full lg:flex lg:flex-col lg:my-10 lg:ml-20 lg:gap-10 lg:h-[91dvh] lg:w-[68.4%]">
+      <Header />
+      <div className="flex gap-10 flex-col lg:overflow-y-scroll">
+        <div className="grid grid-cols-1 lg:flex lg:gap-8">
+          <RevenueChart />
+          <TransactionHistory />
         </div>
+        <Sales />
+        <BueyerHistory />
       </div>
-      <div className="hidden lg:flex flex-col my-10 ml-20 gap-10 h-[91dvh] w-[68.4%]">
-        <SubHeader />
-        <div className="flex gap-10 flex-col overflow-y-scroll">
-          <div className="flex gap-8">
-            <RevenueChart />
-            <TransactionHistory />
-          </div>
-          <Sales />
-          <BueyerHistory />
-        </div>
-      </div>
-    </>
+    </div>
   )
 }

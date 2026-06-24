@@ -1,78 +1,35 @@
 'use client'
 
-import { useSubHeader } from '@/context/sub-header.context'
-import DasboardIcon from '@/icons/dashboardIcon.svg'
-import DisconnectIcon from '@/icons/disconnectIcon.svg'
-import SettingsIcon from '@/icons/settingsIcon.svg'
-import SupportIcon from '@/icons/supportIcon.svg'
-import TransactionsIcon from '@/icons/transactionIcon.svg'
-import WalletIcon from '@/icons/walletIcon.svg'
-import EFront from '@/images/eFront.svg'
-import { sidebarPath } from '@/util/routePaths'
-import Link from 'next/link'
+import { useHeader } from '@/context/header.context'
+import { routePath } from '@/util/routePaths'
+import { LogOut, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
-import { SidebarMobile } from './mobile'
+import EFront from '../../../public/images/eFront.svg'
+import { List } from './list'
 
 export default function Sidebar() {
   const path = usePathname()
-  const { isOpen } = useSubHeader()
+  const { isOpen, setIsOpen } = useHeader()
 
   return (
-    <>
-      {isOpen && <SidebarMobile />}
-      <div className="w-[18.15%] bg-white p-10 rounded-r-[1.5rem] h-screen hidden lg:block">
-        <EFront alt="eFront" className="m-5 mb-[3.75rem]" />
-        <ul className="flex gap-4 flex-col">
-          <Link
-            href={sidebarPath.dashboard}
-            className={`flex gap-2 items-center ${
-              sidebarPath.dashboard === path
-                ? 'text-brandColor stroke-brandColor bg-purple10 '
-                : 'hover:text-brandColor hover:stroke-brandColor hover:bg-purple10'
-            }rounded-md p-4`}
-          >
-            <DasboardIcon alt="dashboard icon" />
-            <li className="mt-0.5">Dashboard</li>
-          </Link>
-          <Link
-            href={sidebarPath.wallet}
-            aria-disabled
-            className="flex gap-2 items-center text-center hover:bg-purple10 hover:text-brandColor hover:stroke-brandColor rounded-md p-4"
-          >
-            <WalletIcon alt="wallet icon" />
-            <li className="mt-1">Carteira</li>
-          </Link>
-          <Link
-            href={sidebarPath.transanctions}
-            aria-disabled
-            className="flex gap-2 items-center hover:bg-purple10 hover:text-brandColor hover:stroke-brandColor rounded-md p-4"
-          >
-            <TransactionsIcon alt="transactions icon" />
-            <li className="mt-1">Transações</li>
-          </Link>
-          <Link
-            href={sidebarPath.support}
-            aria-disabled
-            className="flex gap-2 items-center hover:bg-purple10 hover:text-brandColor hover:stroke-brandColor rounded-md p-4"
-          >
-            <SupportIcon alt="support icon" />
-            <li className="mt-1">Suporte</li>
-          </Link>
-          <div className="w-auto h-0.5 bg-[#F2F6FF]" />
-          <Link
-            href={sidebarPath.settings}
-            aria-disabled
-            className="flex gap-2 items-center hover:bg-purple10 hover:text-brandColor hover:stroke-brandColor rounded-md p-4"
-          >
-            <SettingsIcon alt="settings icon" />
-            <li className="mt-1">Ajustes</li>
-          </Link>
-          <div className="flex gap-2 items-center bg-[#F03D3D0F] rounded-md p-4 cursor-pointer">
-            <DisconnectIcon alt="disconnect icon" />
-            <li className="text-red-500 mt-1">Desconectar</li>
-          </div>
-        </ul>
+    <aside
+      className={`bg-white lg:flex lg:flex-col p-10 rounded-r-[1.5rem] ${!isOpen && 'hidden'} lg:relative h-full fixed`}
+    >
+      <div className="text-right lg:hidden">
+        <button className="cursor-pointer" onClick={() => setIsOpen(false)}>
+          <X />
+        </button>
       </div>
-    </>
+      <EFront alt="eFront" className="m-5 mb-[3.75rem]" />
+      <ul className="flex gap-4 flex-col">
+        {routePath.map((list) => (
+          <List key={list.path} list={list} path={path} />
+        ))}
+        <li className="flex text-red-500 gap-2 items-center bg-[#F03D3D0F] rounded-md cursor-pointer p-4">
+          <LogOut />
+          <span className="mt-0.5">Desconectar</span>
+        </li>
+      </ul>
+    </aside>
   )
 }

@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@tailwind utilities;
 
 @theme {
   --color-purple10: #9e6efe0f;
