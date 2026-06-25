@@ -8,7 +8,7 @@ export function Sales() {
         return (
           <div
             key={sale.id}
-            className="flex flex-col rounded-[0.75rem] p-5 bg-white gap-3 lg:w-80 lg:h-full h-fit"
+            className="flex flex-col rounded-[0.75rem] p-5 bg-white gap-3 lg:flex-1"
           >
             <p className="text-base">{sale.title}</p>
             <p className="text-2xl font-semibold">{sale.value}</p>
