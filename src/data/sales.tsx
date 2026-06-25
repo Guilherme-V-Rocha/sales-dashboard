@@ -26,7 +26,7 @@ export const salesData = [
     value: 'R$ 130,00',
     percentage: '-80%',
     icon: NegativeIcon,
-    iconBackgroundColor: '#F03D3D',
+    iconBackgroundColor: '#F03D3D0F',
     iconTextColor: '#F03D3D',
   },
   {

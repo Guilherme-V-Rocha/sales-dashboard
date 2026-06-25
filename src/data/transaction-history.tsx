@@ -2,7 +2,7 @@ export const transactionHistoryData = [
   {
     id: 1,
     Weekname: 'Ontem',
-    value: 'R$ -R540,32',
+    value: 'R$ -540,32',
   },
   {
     id: 2,
