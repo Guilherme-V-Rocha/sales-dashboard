@@ -8,15 +8,16 @@ type listProps = {
 export function List({ list, path }: listProps) {
   const isActive = list.path === path
   return (
-    <li>
-      <a
-        href={list.path}
-        className={`flex gap-2 items-center rounded-md p-4 pointer-events-none${
-          isActive
-            ? 'text-brandColor stroke-brandColor bg-purple10 '
-            : 'hover:text-brandColor hover:stroke-brandColor hover:bg-purple10 '
-        }`}
-      >
+    <li
+      key={list.path}
+      className={`pointer-events-none rounded-md
+       ${
+         isActive
+           ? 'text-brandColor stroke-brandColor bg-purple10 '
+           : 'hover:text-brandColor hover:stroke-brandColor hover:bg-purple10 '
+       }`}
+    >
+      <a href={list.path} className="flex gap-2 items-center p-4">
         <list.icon />
         <span className="mt-0.5">{list.name}</span>
       </a>

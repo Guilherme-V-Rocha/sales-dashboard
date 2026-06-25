@@ -6,6 +6,7 @@ export const buyerHistoryData = [
     location: 'Rio Grande do Sul',
     value: 'R$ 15,00',
     situation: 'Aprovado',
+    situationColor: '#0BB07B',
   },
   {
     id: '#67890',
@@ -13,7 +14,8 @@ export const buyerHistoryData = [
     name: 'Beatriz Rodrigues',
     location: 'Salvador',
     value: 'R$ 20,00',
-    situation: 'Pendente',
+    situation: 'Reprovado',
+    situationColor: '#de2222',
   },
   {
     id: '#67832',
@@ -22,5 +24,6 @@ export const buyerHistoryData = [
     location: 'Brasília',
     value: 'R$ 25,00',
     situation: 'Em análise',
+    situationColor: '#FFCE52',
   },
 ]

@@ -13,7 +13,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`bg-white lg:flex lg:flex-col p-10 rounded-r-[1.5rem] ${!isOpen && 'hidden'} lg:relative h-full fixed`}
+      className={`bg-white lg:flex lg:flex-col p-10 rounded-r-[1.5rem] ${!isOpen && 'hidden'} lg:sticky lg:top-0 h-dvh fixed`}
     >
       <div className="text-right lg:hidden">
         <button className="cursor-pointer" onClick={() => setIsOpen(false)}>

@@ -44,7 +44,13 @@ export function Table() {
               {row.value}
             </td>
             <td className="py-5 text-gray10 font-medium text-sm whitespace-nowrap">
-              {row.situation}
+              <div className="flex items-center gap-1.5">
+                <div
+                  className="w-2.5 h-2.5 rounded"
+                  style={{ backgroundColor: row.situationColor }}
+                />
+                {row.situation}
+              </div>
             </td>
           </tr>
         ))}
